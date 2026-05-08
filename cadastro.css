@@ -1,0 +1,77 @@
+h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* text-decoration: underline; */
+    color: #ffff;
+}
+
+
+p {
+    color: #ffff;
+}
+
+
+.container {
+    min-height: calc(100vh - 60px);
+    /* desconta navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcad {
+    background-color: rgba(255, 255, 255, 0.099);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    width: 400px;
+
+}
+
+
+.formcad form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+}
+
+
+.formcad input,
+.formcad textarea,
+.formcad button {
+    width: 100%;
+}
+
+
+.formcad input,
+.formcad textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.formcad button {
+    padding: 10px;
+    background-color: #63ff9a;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sku {
+    display: flex;
+    flex-direction: row;
+    background-color: #00000024;
+    border-radius: 5px;
+}

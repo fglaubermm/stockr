@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockr</title>
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="suporte.css">
+    <link rel="stylesheet" href="geral.css">
+
+    <link rel="icon" type="image/x-icon" href="stockrlogo.png">
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <ul class="menu">
+            <span class="title">Suporte</span>
+            <li class="dropdown">
+                <a href="#">Menu ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="pagina1.html">Pagina Inicial</a></li>
+                    <li><a href="geral.html">Visão Geral</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="suporte.html">Suporte</a></li>
+                    <li><a href="index.html">Logout</a></li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="right">
+            <img src="stockrmain.png" class="logo">
+        </div>
+
+    </nav>
+
+
+
+
+    <form>
+        <p>Dados do usuario</p>
+
+        <label>Foto de Perfil</label>
+        <input type="file" accept="image/*">
+        <!-- srviço para o pessoal do backend -->
+
+        <div class="campo">
+            <label>Nome</label>
+            <input type="text" name="razao" required>
+        </div>
+
+
+        <div class="campo">
+            <label>Email</label>
+
+            <input type="email" name="email" required>
+        </div>
+
+
+
+        <div class="campo">
+            <label>Senha</label>
+            <input type="password" name="senhal" required>
+        </div>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <div class="suportao">
+        <div class="suporte1">
+            <p>Suporte via Formulário</p>
+            <a href="">Clique aqui</a>
+        </div>
+        <div class="suporte2">
+            <p>Suporte Imediado</p>
+            <a href="">Entre em contato</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

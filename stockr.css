@@ -1,0 +1,117 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.esquerda,
+.direita {
+    width: 50%;
+}
+
+
+/* para dividir a tela com dois lados iguais, faz-se assim ;) */
+
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.direita h1 {
+    color: blue
+}
+
+.direita p {
+    color: black;
+}
+
+.direita a {
+    color: black
+}
+
+
+
+.esquerda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("estoque.png");
+    /* background-image: url("estoque.png"); */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+}
+
+.esquerdaform {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.089);
+    padding: 12px 12px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.esquerdaform form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.esquerdaform p {
+
+    color: azure
+}
+
+
+.input {
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.log {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(88, 113, 204);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.autitech {
+    padding: 12px 12px;
+    /* background-color: #ffffff23; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.autitech a {
+    color: #5f5f5f;
+    text-decoration: none;
+
+}

@@ -1,0 +1,94 @@
+/* Navbar */
+.navbar {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    width: 100%;
+    /* ocupa toda largura */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    /* evita overflow */
+
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* .menu p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+} */
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    list-style: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+    /* remove do último */
+}
+
+.dropdown-menu li a {
+    white-space: nowrap;
+    /* impede quebra de linha */
+    display: block;
+    padding: 10px 15px;
+
+}
+
+.dropdown-menu li a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Lado direito */
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockr</title>
+
+    <link rel="stylesheet" href="page1.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="cadastro.css">
+
+    <link rel="icon" type="image/x-icon" href="stockrlogo.png">
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+
+        <ul class="menu">
+            <span class="title">Cadastro de Materiais</span>
+            <li class="dropdown">
+                <a href="#">Menu ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="pagina1.html">Pagina Inicial</a></li>
+                    <li><a href="#">Visão Geral</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="suporte.html">Suporte</a></li>
+                    <li><a href="index.html">Logout</a></li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="right">
+            <img src="stockrmain.png" class="logo">
+        </div>
+
+    </nav>
+
+
+
+    <main class="container">
+
+
+        <div class="formcad">
+            <h1>Cadastro de Novo Material</h1>
+
+            <form>
+                <div class="sku">
+                    <label>Código do Item*</label>
+                    <input type="text" required>
+                </div>
+                <div class="sku">
+
+                    <label>Data de entrada</label>
+                    <input type="date" placeholder="Data de entrada" required>
+                </div>
+                <input type="text" placeholder="Nome do item*" required>
+                <input type="text" placeholder="Valor">
+                <input type="text" placeholder="Categoria">
+
+                <textarea placeholder="Adicione descrição*" required></textarea>
+
+
+                <button type="submit">Cadastrar</button>
+                <!-- quando cadastrar colocoar aquele js dizendo "produto cadastrado com sucesso!"" -->
+            </form>
+        </div>
+
+    </main>
+
+
+
+</body>
+<script src="page1.js"></script>
+
+</html>

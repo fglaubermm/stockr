@@ -1,0 +1,60 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.hero h1 {
+    line-height: 1.5;
+}
+
+.servicos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.servicofilho {
+    height: 100px;
+    background: rgb(52, 57, 88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.servicofilho:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+}
+
+
+.servicofilho a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset básico (importante pra consistência entre páginas) */
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #475192;
+}
