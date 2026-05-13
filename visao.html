@@ -168,16 +168,95 @@
                     <td>Microfone USB</td>
                     <td>249.90</td>
                     <td>Áudio</td>
-                    <td>Captação condensadora</td>
+                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non cupiditate rerum blanditiis, id
+                        excepturi ipsum! Cupiditate, minima rem, culpa placeat maiores, eaque eum asperiores optio
+                        consectetur vero et quisquam repellat.</td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+
+            <h2>Editar Item</h2>
+            <label>ID</label>
+            <input type="number" id="cod" readonly>
+            <label>Data</label>
+            <input type="text" id="data" readonly>
+            <label>Produto</label>
+            <input type="text" id="produto">
+            <label>Valor</label>
+            <input type="text" id="valor">
+            <label>Categoria</label>
+            <input type="text" id="categoria">
+            <label>Descrição</label>
+            <textarea id="descricao"></textarea>
+
+            <button id="salvar">Salvar ✓</button>
+
+        </div>
     </div>
 
 
 
 
-
 </body>
+
+
+<script>
+    const fechar = document.querySelector(".fechar");
+    fechar.addEventListener("click", function () {
+
+        modal.style.display = "none";
+
+    });
+    const linhas = document.querySelectorAll("tbody tr");
+
+
+
+    const modal = document.getElementById("modal");
+
+    const codInput = document.getElementById("cod");
+
+    const dataInput = document.getElementById("data");
+
+    const produtoInput = document.getElementById("produto");
+
+    const valorInput = document.getElementById("valor");
+
+    const categoriaInput = document.getElementById("categoria");
+
+    const descricaoInput = document.getElementById("descricao");
+
+
+
+    linhas.forEach(linha => {
+
+        linha.addEventListener("click", function () {
+
+            const colunas = linha.children;
+
+            codInput.value = colunas[0].innerText;
+
+            dataInput.value = colunas[1].innerText
+
+            produtoInput.value = colunas[2].innerText;
+
+            valorInput.value = colunas[3].innerText;
+
+            categoriaInput.value = colunas[4].innerText;
+
+            descricaoInput.value = colunas[5].innerText;
+
+            modal.style.display = "flex";
+
+        });
+
+    });
+
+
+</script>
+
 
 </html>
