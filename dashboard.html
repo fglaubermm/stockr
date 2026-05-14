@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockr: Gestão</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="icon" type="image/x-icon" href="stockrlogo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <ul class="menu">
+            <li><a href="#">Supervisório</a></li>
+
+            <li class="dropdown">
+                <a href="#">Menu ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="pagina1.html">Pagina Inicial</a></li>
+                    <li><a href="visao.html">Visão Geral</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="dashboard.html">Supervisório</a></li>
+                    <li><a href="suporte.html">Suporte</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="right">
+            <img src="stockrmain.png" class="logo">
+        </div>
+
+    </nav>
+
+
+    <main>
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Produtos em Estoque</h3>
+                <div class="numero">1085</div>
+            </div>
+
+            <div class="card">
+                <h3>Estoque Baixo</h3>
+                <div class="numero">1400</div>
+            </div>
+
+            <div class="card">
+                <h3>Valor Total em Estoque</h3>
+                <div class="numero dinheiro">750.90</div>
+            </div>
+
+        </div>
+
+        <script>
+            const contadores = document.querySelectorAll(".numero");
+
+            contadores.forEach(contador => {
+
+                const valorReal = parseFloat(contador.innerText);
+
+                let interval = setInterval(() => {
+
+                    let numeroFake = Math.random() * valorReal;
+
+                    // verifica se é dinheiro
+                    if (contador.classList.contains("dinheiro")) {
+
+                        contador.innerText = numeroFake.toLocaleString('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL'
+                        });
+
+                    } else {
+
+                        contador.innerText = Math.floor(numeroFake);
+
+                    }
+
+                }, 80);
+
+                setTimeout(() => {
+
+                    clearInterval(interval);
+
+                    if (contador.classList.contains("dinheiro")) {
+
+                        contador.innerText = valorReal.toLocaleString('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL'
+                        });
+
+                    } else {
+
+                        contador.innerText = valorReal;
+
+                    }
+
+                }, 1000);
+
+            });
+
+        </script>
+
+        <br>
+
+        <div class="dashbarra">
+            <div class="dash1">
+                <canvas id="dash1"></canvas>
+                <script>
+                    const ctx = document.getElementById('dash1');
+
+                    let labelX = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]
+                    let labelY = [12, 19, 3, 5.50, 2, 40.3]
+
+
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: labelX,
+                            datasets: [{
+                                label: 'Item',    // CABEÇALHO DO RELATÓRIO
+                                data: labelY,
+                                borderWidth: 1,
+                                backgroundColor: ['blue', 'pink', 'yellow', 'green', 'grey', 'orange'],
+                                borderColor: 'black',
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+
+                </script>
+                <p>Quantidade por categoria</p>
+            </div>
+
+
+            <div class="dash2">
+                <canvas id="dash2"></canvas>
+
+                <script>
+
+                    const ctt = document.getElementById('dash2');
+
+                    let labelXX = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]
+                    let labelYY = [500, 300, 80, 550, 200, 40.3]
+
+
+                    new Chart(ctt, {
+                        type: 'pie',
+                        data: {
+                            labels: labelXX,
+                            datasets: [{
+                                label: 'VALOR POR CATEGORIA',    // CABEÇALHO DO RELATÓRIO
+                                data: labelYY,
+                                borderWidth: 1,
+                                backgroundColor: ['blue', 'pink', 'yellow', 'green', 'grey', 'orange'],
+                                borderColor: 'black',
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+                <p>Valor por categoria</p>
+            </div>
+
+        </div>
+        <br>
+
+
+    </main>
+
+    <div class="rodape-impressao" id="rodapeImpressao">
+
+    </div>
+    <script>
+        window.addEventListener("beforeprint", function () {
+
+            const rodape = document.getElementById("rodapeImpressao");
+
+            const agora = new Date();
+
+            rodape.innerText =
+                `Impresso em: ${agora.toLocaleDateString()} às ${agora.toLocaleTimeString()}`;
+
+        });
+    </script>
+</body>
+
+</html>
